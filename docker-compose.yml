@@ -1,0 +1,16 @@
+version: "3.0"
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "P@ssw0rd"
+    ports:
+      - "1433:1433"
+  flyway:
+    image: flyway/flyway
+    command: -url=jdbc:sqlserver://db -user=SA -password=P@ssw0rd -connectRetries=60 migrate
+    volumes:
+      - ./sql:/flyway/sql
+    depends_on:
+      - db

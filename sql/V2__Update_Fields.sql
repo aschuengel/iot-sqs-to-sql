@@ -1,0 +1,1 @@
+ALTER TABLE IotMessage ADD [Type] NVARCHAR(64)
