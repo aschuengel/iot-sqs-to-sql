@@ -1,7 +1,5 @@
 package com.heidelberg;
 
-import java.util.function.Supplier;
-
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.dataformat.JsonLibrary;
 import org.springframework.stereotype.Component;
