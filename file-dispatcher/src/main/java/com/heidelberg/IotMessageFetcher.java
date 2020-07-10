@@ -1,23 +1,22 @@
 package com.heidelberg;
 
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-
 import org.apache.camel.Handler;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import java.util.List;
 
 public class IotMessageFetcher {
+    private final JdbcTemplate jdbcTemplate;
+    private final BeanPropertyRowMapper<IotMessage> propertyRowMapper
+            = new BeanPropertyRowMapper<>(IotMessage.class);
+
+    public IotMessageFetcher(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
+
     @Handler
     public List<IotMessage> fetch() {
-        return IntStream.range(0, 10).mapToObj(i -> {
-            IotMessage message = new IotMessage();
-            message.setId(UUID.randomUUID().toString());
-            message.setDate(new Date());
-            message.setComment("Fake date " + i);
-            message.setType("test");
-            return message;
-        }).collect(Collectors.toList());
+        return jdbcTemplate.query("SELECT * FROM IotMessage", propertyRowMapper);
     }
 }

@@ -1,0 +1,5 @@
+allprojects {
+    group = 'com.heidelberg'
+    version = '1.0.0-SNAPSHOT'
+}
+

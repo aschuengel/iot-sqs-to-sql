@@ -3,7 +3,11 @@ target/
 .vscode/
 .idea/
 .settings/
+.gradle/
 logs/
+bin/
+upload/
+sftp-upload/
 
 .project
 .classpath

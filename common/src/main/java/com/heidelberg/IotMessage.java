@@ -9,9 +9,18 @@ public class IotMessage {
     private String comment;
     private String cloudId;
     private String id;
+    private String fileId;
     private Map<String, Object> payload;
 
     public IotMessage() {
+    }
+
+    public String getFileId() {
+        return fileId;
+    }
+
+    public void setFileId(String fileId) {
+        this.fileId = fileId;
     }
 
     public String getId() {

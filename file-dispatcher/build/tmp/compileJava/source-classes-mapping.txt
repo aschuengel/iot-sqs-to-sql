@@ -1,0 +1,10 @@
+com/heidelberg/FileDispatcherApplication.java
+ com.heidelberg.FileDispatcherApplication
+com/heidelberg/IotFileFetcher.java
+ com.heidelberg.IotFileFetcher
+com/heidelberg/IotMessageFetcher.java
+ com.heidelberg.IotMessageFetcher
+com/heidelberg/IotMessageDeleter.java
+ com.heidelberg.IotMessageDeleter
+com/heidelberg/Routing.java
+ com.heidelberg.Routing

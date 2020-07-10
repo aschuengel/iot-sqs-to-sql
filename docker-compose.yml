@@ -17,7 +17,7 @@ services:
   sftp:
     image: atmoz/sftp
     volumes:
-      - ./upload:/home/foo
+      - ./sftp-upload:/home/foo
     ports:
       - '2222:22'
     command: foo:P@ssw0rd:1001

@@ -1,0 +1,1 @@
+ALTER TABLE IotMessage ADD [FileId] NVARCHAR(64)
