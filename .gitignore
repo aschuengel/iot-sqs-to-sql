@@ -6,6 +6,7 @@ target/
 .gradle/
 logs/
 bin/
+build/
 upload/
 sftp-upload/
 

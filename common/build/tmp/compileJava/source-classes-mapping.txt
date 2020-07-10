@@ -1,4 +1,0 @@
-com/heidelberg/IotMessage.java
- com.heidelberg.IotMessage
-com/heidelberg/IotFile.java
- com.heidelberg.IotFile
