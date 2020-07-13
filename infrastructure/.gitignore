@@ -15,9 +15,14 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+function_payload.zip
 
 # Serverless directories
 .serverless
+.terraform
+terraform.tfstate
+terraform.tfstate.backup
+
 # Ignore Gradle project-specific cache directory
 .gradle
 
